@@ -8,7 +8,8 @@
   --grey-light-4: #ccc;
   --grey-dark-1: #333;
   --grey-dark-2: #777;
-  --grey-dark-3: #999; }
+  --grey-dark-3: #999;
+  --white: #fff; }
 
 * {
   margin: 0;
@@ -24,6 +25,7 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -32,3 +34,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
+
+.container {
+  background-color: var(--grey-light-1);
+  margin: 8rem auto;
+  min-height: 55rem;
+  max-width: 120rem; }
+
+.header {
+  height: 7rem;
+  background-color: var(--white);
+  border-bottom: var(--grey-light-2); }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--grey-dark-1);
+  flex: 0 0 18%; }
+
+.hotel-view {
+  background-color: var(--white);
+  flex: 1; }
