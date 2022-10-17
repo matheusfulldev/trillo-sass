@@ -58,6 +58,7 @@ body {
 
 .hotel-view {
   background-color: orangered;
+  height: 80rem;
   flex: 1; }
 
 .logo {
@@ -138,3 +139,17 @@ body {
       margin-right: 1rem; }
     .user-nav__user-name {
       font-size: 1.4rem; }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .sidebar-nav__icon {
+    height: 2.2rem;
+    width: 2.2rem; }
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--grey-light-4);
+  text-align: center;
+  padding: 2rem; }
