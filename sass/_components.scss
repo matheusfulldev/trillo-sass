@@ -199,3 +199,35 @@
     text-align: center;
     padding: 2rem;
 }
+
+////////////////////////////////////////
+// GALLERY
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+    }
+
+}
+
+////////////////////////////////////////
+// OVERVIEW
+
+.overview {
+    display: flex;
+
+    [class^="overview__icon"] {
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__stars {
+        margin-right: auto;
+    }
+
+}
+
+
