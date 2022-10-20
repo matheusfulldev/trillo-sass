@@ -9,6 +9,7 @@
   --grey-dark-1: #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
+  --shadow-light: 0 1rem 5rem rgba(0,0,0,0.06);
   --white: #fff;
   --line: 1px solid var(--grey-light-2); }
 
@@ -58,8 +59,23 @@ body {
   flex: 0 0 18%; }
 
 .hotel-view {
-  height: 80rem;
   flex: 1; }
+
+.detail {
+  padding: 4.5rem;
+  display: flex; }
+
+.description {
+  font-size: 1.4rem;
+  flex: 0 0 60%;
+  box-shadow: var(--shadow-light);
+  background-color: white;
+  padding: 3rem;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  flex: 1;
+  background-color: yellowgreen; }
 
 .logo {
   height: 3.5rem;
@@ -255,3 +271,42 @@ body {
   100% {
     transform: scale(1);
     box-shadow: none; } }
+
+.paragraph {
+  color: var(--grey-dark-2); }
+  .paragraph:not(:last-of-type) {
+    margin-bottom: 2rem; }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  margin: 4rem 0; }
+  .list__item {
+    flex: 0 0 50%; }
+    .list__item::before {
+      content: '';
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin-right: .7rem;
+      background-image: var(--color-primary);
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover; }
+
+.recommend {
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: -1.5rem; }
