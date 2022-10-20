@@ -9,7 +9,8 @@
   --grey-dark-1: #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
-  --shadow-light: 0 1rem 5rem rgba(0,0,0,0.06);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
   --white: #fff;
   --line: 1px solid var(--grey-light-2); }
 
@@ -62,11 +63,11 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   padding: 4.5rem;
   display: flex; }
 
 .description {
-  font-size: 1.4rem;
   flex: 0 0 60%;
   box-shadow: var(--shadow-light);
   background-color: white;
@@ -74,8 +75,10 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  flex: 1;
-  background-color: yellowgreen; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; }
 
 .logo {
   height: 3.5rem;
@@ -210,6 +213,7 @@ body {
     width: 100%; }
 
 .overview {
+  background-color: var(--white);
   display: flex;
   align-items: center;
   border-bottom: var(--line); }
@@ -254,10 +258,16 @@ body {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  padding: .35rem;
   border-bottom: 1px solid currentColor;
   transition: all .4s; }
+  .btn-inline span {
+    margin-left: .3rem;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: .8rem; }
   .btn-inline:focus {
     animation: pulsate 1s infinite; }
 
@@ -283,6 +293,7 @@ body {
   list-style: none;
   border-top: var(--line);
   border-bottom: var(--line);
+  padding: 4rem;
   margin: 4rem 0; }
   .list__item {
     flex: 0 0 50%; }
@@ -310,3 +321,44 @@ body {
     border-radius: 50%;
     border: 3px solid #fff;
     margin-right: -1.5rem; }
+
+.review {
+  position: relative;
+  background-color: var(--white);
+  box-shadow: var(--shadow-light);
+  z-index: 3;
+  padding: 3rem;
+  margin-bottom: 4.5rem; }
+  .review::before {
+    font-size: 24rem;
+    color: var(--grey-light-3);
+    line-height: 1;
+    font-family: sans-serif;
+    content: '\201C';
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    z-index: -1; }
+  .review__text {
+    z-index: 5; }
+  .review__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem; }
+    .review__user-box {
+      margin: 0 auto 0 1.2rem; }
+    .review__user-name {
+      color: var(--grey-dark-2);
+      text-transform: uppercase;
+      font-weight: 700; }
+    .review__user-date {
+      font-size: 1.2rem; }
+    .review__user-rating {
+      color: var(--color-primary);
+      font-size: 2.5rem;
+      font-weight: 400; }
+  .review__photo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%; }

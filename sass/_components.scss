@@ -217,6 +217,7 @@
 // OVERVIEW
 
 .overview {
+    background-color: var(--white);
     display: flex;
     align-items: center;
     border-bottom: var(--line);
@@ -283,11 +284,21 @@
     border: none;
     cursor: pointer;
     background-color: transparent;
+    padding: .35rem;
     border-bottom: 1px solid currentColor;
     transition: all .4s;
 
+    & span {
+        margin-left: .3rem;
+        transition: margin-left .2s;
+    }
+
     &:hover {
         color: var(--grey-dark-1);
+
+        span {
+            margin-left: .8rem;
+        }
     }
 
     &:focus {
@@ -334,6 +345,7 @@
 
     border-top: var(--line);
     border-bottom: var(--line);
+    padding: 4rem;
     margin: 4rem 0;
 
     &__item {
@@ -381,5 +393,67 @@
         border-radius: 50%;
         border: 3px solid #fff;
         margin-right: -1.5rem;
+    }
+}
+
+////////////////////////////////////////
+// REVIEWS 
+
+.review {
+    position: relative;
+    background-color: var(--white);
+    box-shadow: var(--shadow-light);
+    z-index: 3;
+
+    padding: 3rem;
+    margin-bottom: 4.5rem;
+
+    &::before {
+        font-size: 24rem;
+        color: var(--grey-light-3);
+        line-height: 1;
+        font-family: sans-serif;
+        content: '\201C';
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        z-index: -1;
+    }
+
+    &__text {
+        z-index: 5;
+    }
+
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.5rem;
+
+        &-box {
+            margin: 0 auto 0 1.2rem;
+        }
+
+        &-name {
+            color: var(--grey-dark-2);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        &-date {
+            font-size: 1.2rem;
+        }
+
+        &-rating {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+    }
+
+    &__photo {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
     }
 }
